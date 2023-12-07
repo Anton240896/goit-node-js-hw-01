@@ -3,6 +3,8 @@ import path from "path";
 import { nanoid } from "nanoid";
 
 const contactsPath = path.resolve("db", "contacts.json");
+// const contactsPath = path.join(__dirname, "contacts.json"); - work only CommonJS
+
 const contactsService = (contacts) =>
   fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
 
